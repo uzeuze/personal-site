@@ -28,7 +28,6 @@ class Home extends Component {
           <div className="content">
             <h1 className="title">Home</h1>
             <h2 className="subtitle">
-              I DEVELOP {' '}
               <span className="typewriter">
                 <TypeWriter data={HERO_SUBTITLES} />
               </span>
