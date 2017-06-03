@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import HomeNavbar from './HomeNavbar';
 import AboutModal from './AboutModal';
+import TypeWriter from './TypeWriter';
+
+const HERO_SUBTITLES = [
+  'MOBILE',
+  'UI/UX',
+  'FULLSTACK'
+]
 
 class Home extends Component {
   constructor() {
@@ -18,7 +25,15 @@ class Home extends Component {
       <div className="Home">
         <HomeNavbar onAboutClick={() => this.setState({ isAbout: true })} />
         <section className="Home__hero fullheight">
-          <h1 className="Home__hero_title">Home</h1>
+          <div className="content">
+            <h1 className="title">Home</h1>
+            <h2 className="subtitle">
+              I DEVELOP {' '}
+              <span className="typewriter">
+                <TypeWriter data={HERO_SUBTITLES} />
+              </span>
+            </h2>
+          </div>
         </section>
         <section className="Home__native fullheight">
           <h2>React Native</h2>
