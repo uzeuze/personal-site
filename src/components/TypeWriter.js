@@ -6,7 +6,8 @@ export default class TypeWriter extends Component {
     this.state = {
       currentIndex: 0,
       currentText: props.data[0],
-      timeouts: []
+      timeouts: [],
+      isCursor: false
     }
     this.deleteText = this.deleteText.bind(this);
   }
@@ -26,13 +27,14 @@ export default class TypeWriter extends Component {
             setTimeout(() => {
               this.setState((state, props) => {
                 return {
-                  currentText: data[state.currentIndex].slice(0, index - i)
+                  currentText: data[state.currentIndex].slice(0, index - i),
+                  isCursor: true
                 }
               });
               if (i === index) {
                 this.renderText();
               }
-            }, (i + 1) * 200)
+            }, (i + 1) * 100)
           )
         });
       }
@@ -67,7 +69,7 @@ export default class TypeWriter extends Component {
               }
             });
             if (i === index) {
-              this.setState({ timeouts: [] });
+              this.setState({ timeouts: [], isCursor: false });
               this.deleteText();
             }
           }, (i + 1) * 200)
@@ -83,12 +85,11 @@ export default class TypeWriter extends Component {
   }
 
   render() {
-    console.log(this.state.timeouts.length)
-    const { currentText } = this.state;
+    const { currentText, isCursor } = this.state;
     return (
       <span className="TypeWriter">
         {currentText}
-        <span>{' '}|</span>
+        {isCursor && <span className="TypeWriter__cursor">|</span>}
       </span>
     );
   }
