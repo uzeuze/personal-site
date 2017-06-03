@@ -5,7 +5,8 @@ export default class TypeWriter extends Component {
     super(props);
     this.state = {
       currentIndex: 0,
-      currentText: props.data[0]
+      currentText: props.data[0],
+      timeouts: []
     }
     this.deleteText = this.deleteText.bind(this);
   }
@@ -21,16 +22,20 @@ export default class TypeWriter extends Component {
     const { currentIndex } = this.state;
     let index = data[currentIndex].length;
     for (let i = 0; i <= index; i++) {
-      setTimeout(() => {
-        this.setState((state, props) => {
-          return {
-            currentText: data[state.currentIndex].slice(0, index - i)
-          }
-        });
-        if (i === index) {
-          this.renderText();
-        }
-      }, (i + 1) * 200);
+      this.setState((s, p) => {
+        timeouts: s.timeouts.push(
+          setTimeout(() => {
+            this.setState((state, props) => {
+              return {
+                currentText: data[state.currentIndex].slice(0, index - i)
+              }
+            });
+            if (i === index) {
+              this.renderText();
+            }
+          }, (i + 1) * 200)
+        )
+      });
     }
   }
 
@@ -40,34 +45,37 @@ export default class TypeWriter extends Component {
     if (data.length > currentIndex + 1) {
       let index = data[currentIndex + 1].length;
       this.setState({ currentIndex: currentIndex + 1 });
-      for (let i = 0; i <= index; i++) {
-        setTimeout(() => {
-          this.setState((state, props) => {
-            return {
-              currentText: data[currentIndex + 1].slice(0, i)
-            }
-          });
-          if (i === index) {
-            this.deleteText();
-          }
-        }, (i + 1) * 200);
-      }
+      this.animateText(index, data[currentIndex + 1]);
     } else {
       this.setState({ currentIndex: 0 });
       let index = data[0].length;
-      for (let i = 0; i <= index; i++) {
-        setTimeout(() => {
-          this.setState((state, props) => {
-            return {
-              currentText: data[0].slice(0, i)
-            }
-          });
-          if (i === index) {
-            this.deleteText();
-          }
-        }, (i + 1) * 200);
-      }
+      this.animateText(index, data[0]);
     }
+  }
+
+  animateText(index, text) {
+    for (let i = 0; i <= index; i++) {
+      this.setState((s, p) => {
+        timeouts: s.timeouts.push(
+          setTimeout(() => {
+            this.setState((state, props) => {
+              return {
+                currentText: text.slice(0, i)
+              }
+            });
+            if (i === index) {
+              this.deleteText();
+            }
+          }, (i + 1) * 200)
+        )
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    this.state.timeouts.forEach(t => {
+      clearTimeout(t);
+    });
   }
 
   render() {
