@@ -8,29 +8,6 @@ import {
 import { LinkContainer } from 'react-router-bootstrap';
 
 class NavbarComponent extends Component {
-
-  renderAuthButton() {
-    const { isAuth } = this.props;
-    if (isAuth) {
-      return (
-        <NavItem
-          className="Navbar__Brand"
-          onClick={() => this.props.logout()}
-        >
-          Logout
-        </NavItem>
-      );
-    }
-    return (
-      <NavItem
-        className="Navbar__Brand"
-        onClick={() => this.props.login()}
-      >
-        Login
-      </NavItem>
-    );
-  }
-
   render() {
     return (
       <Navbar
@@ -52,7 +29,6 @@ class NavbarComponent extends Component {
             <LinkContainer className="Navbar__Link" to="/profile">
               <NavItem>Profile</NavItem>
             </LinkContainer>
-            {this.renderAuthButton()}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
