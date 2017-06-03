@@ -4,3 +4,13 @@
   margin: 0;
   z-index: 100;
 }
+
+.HomeNavbar__AboutButton {
+  border: 1px solid #fff;
+  margin-right: 50px;
+  margin-top: 20px;
+  
+  a {
+    padding: 5px !important;
+  }
+}

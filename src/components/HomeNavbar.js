@@ -23,6 +23,7 @@ class HomeNavbar extends Component {
           </Navbar.Header>
           <Nav pullRight>
             <NavItem
+              className="HomeNavbar__AboutButton"
               onClick={() => {
                 this.props.onAboutClick();
               }}
