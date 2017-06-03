@@ -1,0 +1,25 @@
+.Home {
+  position: relative;
+}
+
+.Home__hero {
+  background-color: #ddd;
+  position: relative;
+  top: -50px;
+  margin-bottom: -50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home__hero_title {
+  margin: 0;
+}
+
+.Home__native {
+  background-color: #555;
+  
+  h2 {
+    margin: 0
+  }
+}
