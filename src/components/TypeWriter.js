@@ -12,31 +12,34 @@ export default class TypeWriter extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.deleteText();
-    }, 1000);
+    this.deleteText();
   }
 
   deleteText() {
     const { data } = this.props;
     const { currentIndex } = this.state;
     let index = data[currentIndex].length;
-    for (let i = 0; i <= index; i++) {
-      this.setState((s, p) => {
-        timeouts: s.timeouts.push(
-          setTimeout(() => {
-            this.setState((state, props) => {
-              return {
-                currentText: data[state.currentIndex].slice(0, index - i)
+    const to = setTimeout(() => {
+      for (let i = 0; i <= index; i++) {
+        this.setState((s, p) => {
+          timeouts: s.timeouts.push(
+            setTimeout(() => {
+              this.setState((state, props) => {
+                return {
+                  currentText: data[state.currentIndex].slice(0, index - i)
+                }
+              });
+              if (i === index) {
+                this.renderText();
               }
-            });
-            if (i === index) {
-              this.renderText();
-            }
-          }, (i + 1) * 200)
-        )
-      });
-    }
+            }, (i + 1) * 200)
+          )
+        });
+      }
+    }, 2000);
+    this.setState((state, props) => {
+      timeouts: state.timeouts.push(to);
+    })
   }
 
   renderText() {
@@ -64,6 +67,7 @@ export default class TypeWriter extends Component {
               }
             });
             if (i === index) {
+              this.setState({ timeouts: [] });
               this.deleteText();
             }
           }, (i + 1) * 200)
@@ -79,6 +83,7 @@ export default class TypeWriter extends Component {
   }
 
   render() {
+    console.log(this.state.timeouts.length)
     const { currentText } = this.state;
     return (
       <span className="TypeWriter">
