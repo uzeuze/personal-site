@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Glyphicon } from 'react-bootstrap';
+
 import HomeNavbar from './HomeNavbar';
 import AboutModal from './AboutModal';
 import TypeWriter from './TypeWriter';
@@ -32,6 +34,9 @@ class Home extends Component {
                 <TypeWriter data={HERO_SUBTITLES} />
               </span>
             </h2>
+          </div>
+          <div className="Home__hero_down_icon_container">
+            <Glyphicon glyph="chevron-down" />
           </div>
         </section>
         <section className="Home__native fullheight">
