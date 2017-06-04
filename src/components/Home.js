@@ -62,7 +62,7 @@ class Home extends Component {
             <div className={this.state.isServicesDisplayed ? 'Home__services_container displayed' : 'Home__services_container'}>
               <Grid>
                 <Row className="show-grid">
-                  <Col xs={4}>
+                  <Col md={4}>
                     <Link to="/">
                       <BasicCard>
                         <i className="icon-mobile-phone Home__services_icon Home__services_icon--mobile"></i>
@@ -74,7 +74,7 @@ class Home extends Component {
                       </BasicCard>
                     </Link>
                   </Col>
-                  <Col xs={4}>
+                  <Col md={4}>
                     <Link to="/">
                       <BasicCard>
                         <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
@@ -86,7 +86,7 @@ class Home extends Component {
                       </BasicCard>
                     </Link>
                   </Col>
-                  <Col xs={4}>
+                  <Col md={4}>
                     <Link to="/">
                       <BasicCard>
                         <i className="icon-code Home__services_icon Home__services_icon--api"></i>
@@ -106,7 +106,7 @@ class Home extends Component {
         <VisibilitySensor
           partialVisibility
           minTopValue={100}
-          onChange={isVisible => console.log(`Visible ${isVisible}`)}
+          onChange={isVisible => {}}
         >
           <section className="Home__native fullheight">
             <h2>React Native</h2>

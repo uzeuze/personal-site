@@ -74,6 +74,12 @@
   }
 }
 
+@media (max-width: 992px) {
+  .Home__services .BasicCard {
+    margin-bottom: 20px;
+  }
+}
+
 .Home__services_title {
   text-align: center;
   color: #fff;
