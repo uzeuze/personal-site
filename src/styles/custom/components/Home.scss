@@ -65,6 +65,15 @@
   }
 }
 
+.Home__services_container {
+  position: relative;
+  top: 300px;
+  &.displayed {
+    top: 0;
+    transition: all 500ms;
+  }
+}
+
 .Home__services_title {
   text-align: center;
   color: #fff;

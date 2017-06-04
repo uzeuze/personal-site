@@ -23,7 +23,8 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      isAbout: false
+      isAbout: false,
+      isServicesDisplayed: false
     }
   }
   render() {
@@ -49,51 +50,57 @@ class Home extends Component {
         </section>
         <VisibilitySensor
           partialVisibility
-          minTopValue={100}
-          onChange={isVisible => console.log(`Visible ${isVisible}`)}
+          minTopValue={300}
+          onChange={isVisible => {
+            if (isVisible) {
+              this.setState({ isServicesDisplayed: true });
+            }
+          }}
         >
           <section className="Home__services">
             <h2 className="Home__services_title">My Expertise</h2>
-            <Grid>
-              <Row className="show-grid">
-                <Col xs={4}>
-                  <Link to="/">
-                    <BasicCard>
-                      <i className="icon-mobile-phone Home__services_icon Home__services_icon--mobile"></i>
-                      <h3 className="Home__services_item_title">MOBILE</h3>
-                      <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                      <div className="Home__services_more">
-                        <h6 className="Home__services_more_text">Learn More</h6>
-                      </div>
-                    </BasicCard>
-                  </Link>
-                </Col>
-                <Col xs={4}>
-                  <Link to="/">
-                    <BasicCard>
-                      <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
-                      <h3 className="Home__services_item_title">UI</h3>
-                      <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                      <div className="Home__services_more">
-                        <h6 className="Home__services_more_text">Learn More</h6>
-                      </div>
-                    </BasicCard>
-                  </Link>
-                </Col>
-                <Col xs={4}>
-                  <Link to="/">
-                    <BasicCard>
-                      <i className="icon-code Home__services_icon Home__services_icon--api"></i>
-                      <h3 className="Home__services_item_title">API</h3>
-                      <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                      <div className="Home__services_more">
-                        <h6 className="Home__services_more_text">Learn More</h6>
-                      </div>
-                    </BasicCard>
-                  </Link>
-                </Col>
-              </Row>
-            </Grid>
+            <div className={this.state.isServicesDisplayed ? 'Home__services_container displayed' : 'Home__services_container'}>
+              <Grid>
+                <Row className="show-grid">
+                  <Col xs={4}>
+                    <Link to="/">
+                      <BasicCard>
+                        <i className="icon-mobile-phone Home__services_icon Home__services_icon--mobile"></i>
+                        <h3 className="Home__services_item_title">MOBILE</h3>
+                        <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                        <div className="Home__services_more">
+                          <h6 className="Home__services_more_text">Learn More</h6>
+                        </div>
+                      </BasicCard>
+                    </Link>
+                  </Col>
+                  <Col xs={4}>
+                    <Link to="/">
+                      <BasicCard>
+                        <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
+                        <h3 className="Home__services_item_title">UI</h3>
+                        <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                        <div className="Home__services_more">
+                          <h6 className="Home__services_more_text">Learn More</h6>
+                        </div>
+                      </BasicCard>
+                    </Link>
+                  </Col>
+                  <Col xs={4}>
+                    <Link to="/">
+                      <BasicCard>
+                        <i className="icon-code Home__services_icon Home__services_icon--api"></i>
+                        <h3 className="Home__services_item_title">API</h3>
+                        <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                        <div className="Home__services_more">
+                          <h6 className="Home__services_more_text">Learn More</h6>
+                        </div>
+                      </BasicCard>
+                    </Link>
+                  </Col>
+                </Row>
+              </Grid>
+            </div>
           </section>
         </VisibilitySensor>
         <VisibilitySensor
