@@ -1525,7 +1525,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.5.3:
+create-react-class@^15.5.1, create-react-class@^15.5.3:
   version "15.5.3"
   resolved "https://registry.yarnpkg.com/create-react-class/-/create-react-class-15.5.3.tgz#fb0f7cae79339e9a179e194ef466efa3923820fe"
   dependencies:
@@ -5117,6 +5117,13 @@ react-scripts@1.0.7:
     whatwg-fetch "2.0.3"
   optionalDependencies:
     fsevents "1.0.17"
+
+react-visibility-sensor@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/react-visibility-sensor/-/react-visibility-sensor-3.9.0.tgz#c7a88a208f36237454f55a2090738f5797ea1284"
+  dependencies:
+    create-react-class "^15.5.1"
+    prop-types "^15.5.4"
 
 react@^15.5.4:
   version "15.5.4"

@@ -51,6 +51,71 @@
     100% {top: 0px;}
 }
 
+.Home__services {
+  background-image: linear-gradient(-90deg, #92D798 0%, #62AD8E 48%, #51A4A7 100%);
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  a {
+    color: $PRIMARY;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.Home__services_title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.Home__services_icon {
+  font-size: 7em;
+}
+
+.Home__services_icon--mobile {
+  color: #a0e0ba;
+}
+
+.Home__services_icon--ui {
+  color: #f3afaf;
+}
+
+.Home__services_icon--api {
+  color: #8dc4dd;
+}
+
+.Home__services_item_title {
+  font-size: 20px;
+}
+
+.Home__services_description {
+  text-align: left;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-top: 20px;
+}
+
+.Home__services_more {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.Home__services_more_text {
+  text-align: center;
+  border-bottom: 1px solid #5dd9d0;
+  width: 45%;
+  margin: 0 auto;
+  padding: 8px 0;
+  color: #25ADA3;
+  font-size: 15.4px;
+  line-height: 24.64px;
+}
+
 .Home__native {
   background-color: #555;
 

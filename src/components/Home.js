@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import { Glyphicon } from 'react-bootstrap';
+import {
+  Glyphicon,
+  Grid,
+  Row,
+  Col
+} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import VisibilitySensor from 'react-visibility-sensor';
 
 import HomeNavbar from './HomeNavbar';
 import AboutModal from './AboutModal';
 import TypeWriter from './TypeWriter';
+import { BasicCard } from './common';
 
 const HERO_SUBTITLES = [
   'MOBILE',
@@ -39,8 +47,72 @@ class Home extends Component {
             <Glyphicon glyph="chevron-down" />
           </div>
         </section>
-        <section className="Home__native fullheight">
-          <h2>React Native</h2>
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={100}
+          onChange={isVisible => console.log(`Visible ${isVisible}`)}
+        >
+          <section className="Home__services">
+            <h2 className="Home__services_title">My Expertise</h2>
+            <Grid>
+              <Row className="show-grid">
+                <Col xs={4}>
+                  <Link to="/">
+                    <BasicCard>
+                      <i className="icon-mobile-phone Home__services_icon Home__services_icon--mobile"></i>
+                      <h3 className="Home__services_item_title">MOBILE</h3>
+                      <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                      <div className="Home__services_more">
+                        <h6 className="Home__services_more_text">Learn More</h6>
+                      </div>
+                    </BasicCard>
+                  </Link>
+                </Col>
+                <Col xs={4}>
+                  <Link to="/">
+                    <BasicCard>
+                      <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
+                      <h3 className="Home__services_item_title">UI</h3>
+                      <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                      <div className="Home__services_more">
+                        <h6 className="Home__services_more_text">Learn More</h6>
+                      </div>
+                    </BasicCard>
+                  </Link>
+                </Col>
+                <Col xs={4}>
+                  <Link to="/">
+                    <BasicCard>
+                      <i className="icon-code Home__services_icon Home__services_icon--api"></i>
+                      <h3 className="Home__services_item_title">API</h3>
+                      <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                      <div className="Home__services_more">
+                        <h6 className="Home__services_more_text">Learn More</h6>
+                      </div>
+                    </BasicCard>
+                  </Link>
+                </Col>
+              </Row>
+            </Grid>
+          </section>
+        </VisibilitySensor>
+        <VisibilitySensor
+          partialVisibility
+          minTopValue={100}
+          onChange={isVisible => console.log(`Visible ${isVisible}`)}
+        >
+          <section className="Home__native fullheight">
+            <h2>React Native</h2>
+          </section>
+        </VisibilitySensor>
+        <section className="Home__web fullheight">
+          <h2>Web</h2>
+        </section>
+        <section className="Home__work_with_me fullheight">
+          <h2>Do you have a project</h2>
+        </section>
+        <section className="Home__footer fullheight">
+          <h2>Footer</h2>
         </section>
       </div>
     );
