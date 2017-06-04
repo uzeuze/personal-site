@@ -1,16 +1,36 @@
-.HomeNavbar__Navbar {
+.HomeNavbar {
   background-color: transparent;
-  border: 0;
-  margin: 0;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
   z-index: 100;
 }
 
-.HomeNavbar__AboutButton {
-  border: 1px solid #fff;
-  margin-right: 50px;
+.HomeNavbar__Brand {
+  margin-left: 50px;
   margin-top: 20px;
-  
+
   a {
-    padding: 5px !important;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.HomeNavbar__AboutButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border: 1px solid #fff;
+  background-color: $PRIMARY;
+  transition: all 1s;
+  padding: 4px 36px;
+  color: #fff;
+  transition: all 1s;
+
+  &:hover {
+    background-color: #fff;
+    color: $PRIMARY;
+    text-decoration: none;
   }
 }
