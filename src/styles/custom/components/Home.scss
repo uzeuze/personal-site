@@ -1,5 +1,11 @@
 @import '../../colors.scss';
 
+
+section {
+  h1, h2, h3 {
+    margin: 0;
+  }
+}
 .Home {
   position: relative;
 }
@@ -12,7 +18,7 @@
   flex-direction: column;
   flex: 1;
   justify-content: center;
-  
+
   .title {
     margin: 0;
     color: #fff;
@@ -130,10 +136,22 @@
   line-height: 24.64px;
 }
 
-.Home__native {
+.Home__mobile {
   background-color: #555;
+}
 
-  h2 {
-    margin: 0
-  }
+.Home__ui {
+  background-color: #f1f1f1;
+}
+
+.Home__api {
+  background-color: $SECONDARY;
+}
+
+.Home__work_with_me {
+  background-color: #f1f1f1;
+}
+
+.Home__footer {
+  background-color: $SECONDARY;
 }

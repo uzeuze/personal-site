@@ -108,17 +108,20 @@ class Home extends Component {
           minTopValue={100}
           onChange={isVisible => {}}
         >
-          <section className="Home__native fullheight">
-            <h2>React Native</h2>
+          <section className="Home__mobile fullheight">
+            <h2>Mobile</h2>
           </section>
         </VisibilitySensor>
-        <section className="Home__web fullheight">
-          <h2>Web</h2>
+        <section className="Home__ui fullheight">
+          <h2>UI</h2>
+        </section>
+        <section className="Home__api fullheight">
+          <h2>API</h2>
         </section>
         <section className="Home__work_with_me fullheight">
           <h2>Do you have a project</h2>
         </section>
-        <section className="Home__footer fullheight">
+        <section className="Home__footer">
           <h2>Footer</h2>
         </section>
       </div>
