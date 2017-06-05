@@ -51,7 +51,7 @@ class Home extends Component {
         </section>
         <VisibilitySensor
           partialVisibility
-          minTopValue={300}
+          minTopValue={200}
           onChange={isVisible => {
             if (isVisible) {
               this.setState({ isServicesDisplayed: true });
@@ -64,7 +64,7 @@ class Home extends Component {
               <Grid>
                 <Row className="show-grid">
                   <Col md={4}>
-                    <div onClick={() => scrollToElement('.Home__mobile')}>
+                    <div className="Home__services_item" onClick={() => scrollToElement('.Home__mobile')}>
                       <BasicCard>
                         <i className="icon-mobile-phone Home__services_icon Home__services_icon--mobile"></i>
                         <h3 className="Home__services_item_title">MOBILE</h3>
@@ -76,7 +76,7 @@ class Home extends Component {
                     </div>
                   </Col>
                   <Col md={4}>
-                    <div onClick={() => scrollToElement('.Home__ui')}>
+                    <div className="Home__services_item" onClick={() => scrollToElement('.Home__ui')}>
                       <BasicCard>
                         <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
                         <h3 className="Home__services_item_title">UI</h3>
@@ -88,7 +88,7 @@ class Home extends Component {
                     </div>
                   </Col>
                   <Col md={4}>
-                    <div onClick={() => scrollToElement('.Home__api')}>
+                    <div className="Home__services_item" onClick={() => scrollToElement('.Home__api')}>
                       <BasicCard>
                         <i className="icon-code Home__services_icon Home__services_icon--api"></i>
                         <h3 className="Home__services_item_title">API</h3>
@@ -119,11 +119,15 @@ class Home extends Component {
         <section className="Home__api fullheight">
           <h2>API</h2>
         </section>
-        <section className="Home__work_with_me fullheight">
-          <h2>Do you have a project</h2>
-        </section>
-        <section className="Home__footer">
-          <h2>Footer</h2>
+        <section className="Home__work_with_me">
+          <div className="Home__work_with_me_content">
+            <h3>Let's work together</h3>
+            <button>CONTACT</button>
+            <div className="Home__work_with_me_social_container">
+              abc
+            </div>
+          </div>
+
         </section>
       </div>
     );

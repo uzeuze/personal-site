@@ -60,29 +60,24 @@ section {
   background-image: linear-gradient(-90deg, #92D798 0%, #62AD8E 48%, #51A4A7 100%);
   padding-top: 20px;
   padding-bottom: 60px;
-
-  a {
-    color: $PRIMARY;
-
-    &:hover, &:focus {
-      text-decoration: none;
-    }
-  }
+  color: $PRIMARY;
 }
 
 .Home__services_container {
-  position: relative;
-  top: 300px;
+  transform: scale(0.5);
+  opacity: 0;
   &.displayed {
-    top: 0;
-    transition: all 500ms;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 1000ms;
   }
 }
 
-@media (max-width: 992px) {
-  .Home__services .BasicCard {
-    margin-bottom: 20px;
-  }
+.Home__services_item {
+  width: 250px;
+  height: 370px;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .Home__services_title {
@@ -150,8 +145,16 @@ section {
 
 .Home__work_with_me {
   background-color: #f1f1f1;
+  height: 300px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.Home__footer {
-  background-color: $SECONDARY;
+@media (max-width: 992px) {
+  .Home__services_item {
+    margin-bottom: 20px;
+  }
 }
