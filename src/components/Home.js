@@ -7,6 +7,7 @@ import {
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
+import scrollToElement from 'scroll-to-element';
 
 import HomeNavbar from './HomeNavbar';
 import AboutModal from './AboutModal';
@@ -63,7 +64,7 @@ class Home extends Component {
               <Grid>
                 <Row className="show-grid">
                   <Col md={4}>
-                    <Link to="/">
+                    <div onClick={() => scrollToElement('.Home__mobile')}>
                       <BasicCard>
                         <i className="icon-mobile-phone Home__services_icon Home__services_icon--mobile"></i>
                         <h3 className="Home__services_item_title">MOBILE</h3>
@@ -72,10 +73,10 @@ class Home extends Component {
                           <h6 className="Home__services_more_text">Learn More</h6>
                         </div>
                       </BasicCard>
-                    </Link>
+                    </div>
                   </Col>
                   <Col md={4}>
-                    <Link to="/">
+                    <div onClick={() => scrollToElement('.Home__ui')}>
                       <BasicCard>
                         <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
                         <h3 className="Home__services_item_title">UI</h3>
@@ -84,10 +85,10 @@ class Home extends Component {
                           <h6 className="Home__services_more_text">Learn More</h6>
                         </div>
                       </BasicCard>
-                    </Link>
+                    </div>
                   </Col>
                   <Col md={4}>
-                    <Link to="/">
+                    <div onClick={() => scrollToElement('.Home__api')}>
                       <BasicCard>
                         <i className="icon-code Home__services_icon Home__services_icon--api"></i>
                         <h3 className="Home__services_item_title">API</h3>
@@ -96,7 +97,7 @@ class Home extends Component {
                           <h6 className="Home__services_more_text">Learn More</h6>
                         </div>
                       </BasicCard>
-                    </Link>
+                    </div>
                   </Col>
                 </Row>
               </Grid>
