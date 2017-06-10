@@ -22,6 +22,12 @@
 
 @media (max-width: 480px) {
   .TypeWriter__cursor {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .TypeWriter__cursor {
     font-size: 20px;
   }
 }
