@@ -46,7 +46,10 @@ class Home extends Component {
             </p>
           </div>
           <div className="Home__hero_down_icon_container">
-            <Glyphicon glyph="chevron-down" />
+            <Glyphicon
+              glyph="chevron-down"
+              onClick={() => scrollToElement('.Home__services')}
+            />
           </div>
         </section>
         <VisibilitySensor
@@ -79,7 +82,7 @@ class Home extends Component {
                     <div className="Home__services_item" onClick={() => scrollToElement('.Home__ui')}>
                       <BasicCard>
                         <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
-                        <h3 className="Home__services_item_title">UI</h3>
+                        <h3 className="Home__services_item_title">WEB</h3>
                         <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                         <div className="Home__services_more">
                           <h6 className="Home__services_more_text">Learn More</h6>
