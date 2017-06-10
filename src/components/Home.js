@@ -15,9 +15,9 @@ import TypeWriter from './TypeWriter';
 import { BasicCard } from './common';
 
 const HERO_SUBTITLES = [
-  'MOBILE',
-  'UI/UX',
-  'FULLSTACK'
+  'websites',
+  'mobile applications',
+  'web applications',
 ]
 
 class Home extends Component {
@@ -38,12 +38,12 @@ class Home extends Component {
         <HomeNavbar onAboutClick={() => this.setState({ isAbout: true })} />
         <section className="Home__hero fullheight">
           <div className="content">
-            <h1 className="title">Home</h1>
-            <h2 className="subtitle">
+            <h1 className="title">Hi, I'm Egemen Can Uze. I build</h1>
+            <p className="subtitle">
               <span className="typewriter">
                 <TypeWriter data={HERO_SUBTITLES} />
               </span>
-            </h2>
+            </p>
           </div>
           <div className="Home__hero_down_icon_container">
             <Glyphicon glyph="chevron-down" />

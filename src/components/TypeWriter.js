@@ -34,7 +34,7 @@ export default class TypeWriter extends Component {
               if (i === index) {
                 this.renderText();
               }
-            }, (i + 1) * 100)
+            }, (i + 1) * 50)
           )
         });
       }
@@ -72,7 +72,7 @@ export default class TypeWriter extends Component {
               this.setState({ timeouts: [], isCursor: false });
               this.deleteText();
             }
-          }, (i + 1) * 200)
+          }, (i + 1) * 75)
         )
       });
     }

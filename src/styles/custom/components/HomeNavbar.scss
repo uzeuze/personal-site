@@ -11,8 +11,8 @@
 
 .HomeNavbar__Brand {
   margin-left: 50px;
-  margin-top: 20px;
-
+  margin-top: 10px;
+  font-size: 26px;
   a {
     color: #fff;
     text-decoration: none;
@@ -23,17 +23,18 @@
   position: absolute;
   right: 20px;
   top: 20px;
-  background-color: rgba(75, 238, 154, 0.5);
+  background-color: $SECONDARY;
   box-shadow: 0 2px 7px 0 rgba(69, 119, 126, 0.37);
   border-radius: 3px;
   transition: all 1s;
   padding: 4px 36px;
   color: #fff;
+  font-weight: bold;
   transition: all 1s;
   cursor: pointer;
 
   &:hover {
-    background-color: $SECONDARY;
+    background-color: rgba(75, 238, 154, 0.5);
     color: #fff;
     text-decoration: none;
   }

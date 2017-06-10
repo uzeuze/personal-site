@@ -5,5 +5,23 @@
   color: #ffc107;
   position: relative;
   top: -4px;
-  font-size: 23px;
+  font-size: 50px;
+}
+
+@media (max-width: 992px) {
+  .TypeWriter__cursor {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .TypeWriter__cursor {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .TypeWriter__cursor {
+    font-size: 20px;
+  }
 }
