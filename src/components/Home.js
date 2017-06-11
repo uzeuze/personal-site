@@ -8,6 +8,7 @@ import {
 import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 import scrollToElement from 'scroll-to-element';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 import HomeNavbar from './HomeNavbar';
 import AboutModal from './AboutModal';
@@ -30,7 +31,17 @@ class Home extends Component {
   }
   render() {
     if (this.state.isAbout) {
-      return <AboutModal onClose={() => this.setState({ isAbout: false })}/>
+      return (
+        <CSSTransitionGroup
+          transitionName="Home__about_modal"
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={false}
+          transitionLeave={false}
+        >
+          <AboutModal onClose={() => this.setState({ isAbout: false })}/>
+        </CSSTransitionGroup>
+      )
     }
 
     return (
