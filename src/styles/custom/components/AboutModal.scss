@@ -8,3 +8,23 @@
     margin: 0;
   }
 }
+
+.AboutModal__info, .AboutModal__message {
+  padding-top: 50px; 
+}
+
+.AboutModal__info {
+  background-color: #f1f1f1;
+  height: 100vh;
+}
+
+.AboutModal__message {
+  background-color: #121212;
+  height: 100vh;
+}
+
+.AboutModal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
