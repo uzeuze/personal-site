@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 import scrollToElement from 'scroll-to-element';
 import { CSSTransitionGroup } from 'react-transition-group';
+import FontAwesome from 'react-fontawesome';
 
 import HomeNavbar from './HomeNavbar';
 import AboutModal from './AboutModal';
@@ -80,7 +81,10 @@ class Home extends Component {
                   <Col md={4}>
                     <div className="Home__services_item" onClick={() => scrollToElement('.Home__mobile')}>
                       <BasicCard>
-                        <i className="icon-mobile-phone Home__services_icon Home__services_icon--mobile"></i>
+                        <FontAwesome
+                          className='Home__services_icon Home__services_icon--mobile'
+                          name='mobile-phone'
+                        />
                         <h3 className="Home__services_item_title">MOBILE</h3>
                         <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                         <div className="Home__services_more">
@@ -92,7 +96,10 @@ class Home extends Component {
                   <Col md={4}>
                     <div className="Home__services_item" onClick={() => scrollToElement('.Home__ui')}>
                       <BasicCard>
-                        <i className="icon-laptop Home__services_icon Home__services_icon--ui"></i>
+                        <FontAwesome
+                          className='Home__services_icon Home__services_icon--ui'
+                          name='laptop'
+                        />
                         <h3 className="Home__services_item_title">WEB</h3>
                         <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                         <div className="Home__services_more">
@@ -104,7 +111,10 @@ class Home extends Component {
                   <Col md={4}>
                     <div className="Home__services_item" onClick={() => scrollToElement('.Home__api')}>
                       <BasicCard>
-                        <i className="icon-code Home__services_icon Home__services_icon--api"></i>
+                        <FontAwesome
+                          className='Home__services_icon Home__services_icon--api'
+                          name='code'
+                        />
                         <h3 className="Home__services_item_title">API</h3>
                         <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                         <div className="Home__services_more">
