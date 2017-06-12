@@ -86,7 +86,7 @@ class Home extends Component {
                           name='mobile-phone'
                         />
                         <h3 className="Home__services_item_title">MOBILE</h3>
-                        <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                        <p className="Home__services_description">I build native mobile applications for iOS and Android using React Native.</p>
                         <div className="Home__services_more">
                           <h6 className="Home__services_more_text">Learn More</h6>
                         </div>
@@ -101,7 +101,7 @@ class Home extends Component {
                           name='laptop'
                         />
                         <h3 className="Home__services_item_title">WEB</h3>
-                        <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                        <p className="Home__services_description">I create interactive user interfaces using HTML, CSS, JavaScript and React.</p>
                         <div className="Home__services_more">
                           <h6 className="Home__services_more_text">Learn More</h6>
                         </div>
@@ -116,7 +116,7 @@ class Home extends Component {
                           name='code'
                         />
                         <h3 className="Home__services_item_title">API</h3>
-                        <p className="Home__services_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                        <p className="Home__services_description">I develop database-backed APIs that can be consumed by web applicaions or other native applications.</p>
                         <div className="Home__services_more">
                           <h6 className="Home__services_more_text">Learn More</h6>
                         </div>
