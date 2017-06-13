@@ -15,6 +15,8 @@ import HomeNavbar from './HomeNavbar';
 import AboutModal from './AboutModal';
 import TypeWriter from './TypeWriter';
 import { BasicCard } from './common';
+import responsiveWebImage from '../assets/web-responsive.png';
+import apiStackWebImage from '../assets/api-stack.png';
 
 const HERO_SUBTITLES = [
   'websites',
@@ -77,7 +79,7 @@ class Home extends Component {
             <h2 className="Home__services_title">My Expertise</h2>
             <div className={this.state.isServicesDisplayed ? 'Home__services_container displayed' : 'Home__services_container'}>
               <Grid>
-                <Row className="show-grid">
+                <Row>
                   <Col md={4}>
                     <div className="Home__services_item" onClick={() => scrollToElement('.Home__mobile')}>
                       <BasicCard>
@@ -138,10 +140,24 @@ class Home extends Component {
           </section>
         </VisibilitySensor>
         <section className="Home__ui fullheight">
-          <h2>UI</h2>
+          <Grid>
+            <Row>
+              <Col md={6}>WEB</Col>
+              <Col md={6}>
+                <img src={responsiveWebImage} alt="responsive design"/>
+              </Col>
+            </Row>
+          </Grid>
         </section>
         <section className="Home__api fullheight">
-          <h2>API</h2>
+          <Grid>
+            <Row>
+              <Col md={6}>
+                <img src={apiStackWebImage} alt="nodejs express mongodb"/>
+              </Col>
+              <Col md={6}>API</Col>
+            </Row>
+          </Grid>
         </section>
         <section className="Home__work_with_me">
           <div className="Home__work_with_me_content">
