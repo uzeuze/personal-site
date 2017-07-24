@@ -3,24 +3,54 @@
   height: 100vh;
   width: 100%;
   background-color: #fff;
-
-  h2 {
-    margin: 0;
-  }
 }
 
 .AboutModal__info, .AboutModal__message {
   padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .AboutModal__info {
-  background-color: #f1f1f1;
+  background-color: #fff;
   height: 100vh;
 }
 
 .AboutModal__message {
   background-color: #121212;
   height: 100vh;
+
+  .form-control {
+    border: 1px solid #3b3b3b;
+    background-color: transparent;
+    margin-bottom: 20px;
+    color: #fff;
+    border-radius: 0;
+  }
+
+  textarea.form-control {
+    height: 100px;
+    resize: none;
+    line-height: 21px;
+  }
+
+  .AboutModal__message_button {
+    border: 1px solid #3b3b3b;
+    background-color: transparent;
+    border-radius: 0;
+    color: #fff;
+  }
+}
+
+.AboutModal__info_content, .AboutModal__message_content {
+  max-width: 400px;
+}
+
+.AboutModal__message_header {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 32px;
 }
 
 .AboutModal__close {
@@ -29,4 +59,8 @@
   right: 10px;
   color: #fff;
   font-size: 32px;
+}
+
+.AboutModal__contact_icon {
+  margin-right: 20px;
 }
