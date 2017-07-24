@@ -64,3 +64,9 @@
 .AboutModal__contact_icon {
   margin-right: 20px;
 }
+
+@media (max-width: 992px) {
+  .AboutModal__close {
+    color: #000;
+  }
+}

@@ -141,11 +141,11 @@ class Home extends Component {
               <Row>
                 <Col md={6} className="Home__col">
                   <div className="Home__mobile_text_container">
-                    <h3>MOBILE</h3>
+                    <h3>MOBILE APPLICATIONS</h3>
                     <p>I build native mobile applications for iOS and Android using React Native.</p>
                   </div>
                 </Col>
-                <Col md={6} className="Home__col">
+                <Col xsHidden smHidden md={6} className="Home__col">
                   <img height={300} src={reactNativeImage} alt="react native"/>
                 </Col>
               </Row>
@@ -157,11 +157,11 @@ class Home extends Component {
             <Row>
               <Col md={6} className="Home__col">
                 <div>
-                  <h3>WEB</h3>
+                  <h3>WEB APPLICATIONS</h3>
                   <p>I create interactive user interfaces using HTML, CSS, JavaScript and React.</p>
                 </div>
               </Col>
-              <Col md={6} className="Home__col">
+              <Col xsHidden smHidden md={6} className="Home__col">
                 <img src={responsiveWebImage} alt="responsive design"/>
               </Col>
             </Row>
@@ -170,12 +170,12 @@ class Home extends Component {
         <section className="Home__api fullheight">
           <Grid>
             <Row>
-              <Col md={6} className="Home__col">
+              <Col xsHidden smHidden md={6} className="Home__col">
                 <img src={apiStackWebImage} alt="nodejs express mongodb"/>
               </Col>
               <Col md={6} className="Home__col">
                 <div>
-                  <h3>API</h3>
+                  <h3>API DEVELOPMENT</h3>
                   <p>I develop database-backed APIs that can be consumed by web applicaions or other native applications.</p>
                 </div>
               </Col>
@@ -184,8 +184,13 @@ class Home extends Component {
         </section>
         <section className="Home__work_with_me">
           <div className="Home__work_with_me_content">
-            <h3>Let's work together</h3>
-            <button onClick={() => this.setState({ isAbout: true })}>CONTACT</button>
+            <h3 className="Home__work_with_me_header">Let's work together</h3>
+            <a
+              className="Home__work_with_me_button"
+              onClick={() => this.setState({ isAbout: true })}
+            >
+              CONTACT
+            </a>
           </div>
 
         </section>

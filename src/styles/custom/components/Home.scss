@@ -159,10 +159,20 @@ section {
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  h3 {
+    font-size: 44px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 28px;
+  }
 }
 
 .Home__ui {
-  background-color: #f1f1f1;
+  background-image: linear-gradient(-90deg, #92D798 0%, #62AD8E 48%, #51A4A7 100%);
+  color: #fff;
 }
 
 .Home__api {
@@ -181,6 +191,25 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.Home__work_with_me_header {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.Home__work_with_me_button {
+  background-color: $SECONDARY;
+  font-size: 22px;
+  padding: 4px 36px;
+  color: #fff;
+
+  &:hover {
+    background-color: rgba(75, 238, 154, 0.5);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 992px) {
@@ -214,6 +243,16 @@ section {
 @media (max-width: 400px) {
   .Home__hero {
     .title, .subtitle {
+      font-size: 20px;
+    }
+  }
+
+  .Home__col {
+    h3 {
+      font-size: 30px;
+    }
+
+    p {
       font-size: 20px;
     }
   }
