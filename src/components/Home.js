@@ -155,14 +155,14 @@ class Home extends Component {
         <section className="Home__ui fullheight">
           <Grid>
             <Row>
+              <Col xsHidden smHidden md={6} className="Home__col">
+                <img src={responsiveWebImage} alt="responsive design"/>
+              </Col>
               <Col md={6} className="Home__col">
                 <div>
                   <h3>WEB APPLICATIONS</h3>
                   <p>I create interactive user interfaces using HTML, CSS, JavaScript and React.</p>
                 </div>
-              </Col>
-              <Col xsHidden smHidden md={6} className="Home__col">
-                <img src={responsiveWebImage} alt="responsive design"/>
               </Col>
             </Row>
           </Grid>
@@ -170,14 +170,14 @@ class Home extends Component {
         <section className="Home__api fullheight">
           <Grid>
             <Row>
-              <Col xsHidden smHidden md={6} className="Home__col">
-                <img src={apiStackWebImage} alt="nodejs express mongodb"/>
-              </Col>
               <Col md={6} className="Home__col">
                 <div>
                   <h3>API DEVELOPMENT</h3>
                   <p>I develop database-backed APIs that can be consumed by web applicaions or other native applications.</p>
                 </div>
+              </Col>
+              <Col xsHidden smHidden md={6} className="Home__col">
+                <img src={apiStackWebImage} alt="nodejs express mongodb"/>
               </Col>
             </Row>
           </Grid>
