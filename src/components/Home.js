@@ -17,6 +17,7 @@ import TypeWriter from './TypeWriter';
 import { BasicCard } from './common';
 import responsiveWebImage from '../assets/web-responsive.png';
 import apiStackWebImage from '../assets/api-stack.png';
+import reactNativeImage from '../assets/react-native.png';
 
 const HERO_SUBTITLES = [
   'websites',
@@ -136,14 +137,31 @@ class Home extends Component {
           onChange={isVisible => {}}
         >
           <section className="Home__mobile fullheight">
-            <h2>Mobile</h2>
+            <Grid>
+              <Row>
+                <Col md={6} className="Home__col">
+                  <div className="Home__mobile_text_container">
+                    <h3>MOBILE</h3>
+                    <p>I build native mobile applications for iOS and Android using React Native.</p>
+                  </div>
+                </Col>
+                <Col md={6} className="Home__col">
+                  <img height={300} src={reactNativeImage} alt="react native"/>
+                </Col>
+              </Row>
+            </Grid>
           </section>
         </VisibilitySensor>
         <section className="Home__ui fullheight">
           <Grid>
             <Row>
-              <Col md={6}>WEB</Col>
-              <Col md={6}>
+              <Col md={6} className="Home__col">
+                <div>
+                  <h3>WEB</h3>
+                  <p>I create interactive user interfaces using HTML, CSS, JavaScript and React.</p>
+                </div>
+              </Col>
+              <Col md={6} className="Home__col">
                 <img src={responsiveWebImage} alt="responsive design"/>
               </Col>
             </Row>
@@ -152,20 +170,22 @@ class Home extends Component {
         <section className="Home__api fullheight">
           <Grid>
             <Row>
-              <Col md={6}>
+              <Col md={6} className="Home__col">
                 <img src={apiStackWebImage} alt="nodejs express mongodb"/>
               </Col>
-              <Col md={6}>API</Col>
+              <Col md={6} className="Home__col">
+                <div>
+                  <h3>API</h3>
+                  <p>I develop database-backed APIs that can be consumed by web applicaions or other native applications.</p>
+                </div>
+              </Col>
             </Row>
           </Grid>
         </section>
         <section className="Home__work_with_me">
           <div className="Home__work_with_me_content">
             <h3>Let's work together</h3>
-            <button>CONTACT</button>
-            <div className="Home__work_with_me_social_container">
-              abc
-            </div>
+            <button onClick={() => this.setState({ isAbout: true })}>CONTACT</button>
           </div>
 
         </section>

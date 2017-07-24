@@ -150,7 +150,15 @@ section {
 }
 
 .Home__mobile {
-  background-color: #fff;
+  background-color: #222;
+  color: #fff;
+}
+
+.Home__col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .Home__ui {
@@ -159,10 +167,14 @@ section {
 
 .Home__api {
   background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Home__work_with_me {
-  background-color: #f1f1f1;
+  background-color: #222;
+  color: #fff;
   height: 300px;
   display: flex;
   flex: 1;
