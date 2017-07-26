@@ -119,7 +119,7 @@ class Home extends Component {
                           name='code'
                         />
                         <h3 className="Home__services_item_title">API</h3>
-                        <p className="Home__services_description">I develop database-backed APIs that can be consumed by web applicaions or other native applications.</p>
+                        <p className="Home__services_description">I develop database-backed APIs that can be consumed by web applications or other native applications.</p>
                         <div className="Home__services_more">
                           <h6 className="Home__services_more_text">Learn More</h6>
                         </div>
@@ -173,7 +173,7 @@ class Home extends Component {
               <Col md={6} className="Home__col">
                 <div>
                   <h3>API DEVELOPMENT</h3>
-                  <p>I develop database-backed APIs that can be consumed by web applicaions or other native applications.</p>
+                  <p>I develop database-backed APIs that can be consumed by web applications or other native applications.</p>
                 </div>
               </Col>
               <Col xsHidden smHidden md={6} className="Home__col">
